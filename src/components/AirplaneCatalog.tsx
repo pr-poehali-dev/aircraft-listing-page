@@ -31,7 +31,7 @@ const airplanes: Airplane[] = [
 const AirplaneCatalog: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
         {airplanes.map((airplane) => (
           <AirplaneCard key={airplane.id} airplane={airplane} />
         ))}
