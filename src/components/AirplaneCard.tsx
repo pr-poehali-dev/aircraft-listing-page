@@ -1,9 +1,9 @@
 import React from "react";
+import Icon from "@/components/ui/icon";
 
 export interface Airplane {
   id: string;
   name: string;
-  imageUrl: string;
 }
 
 interface AirplaneCardProps {
@@ -12,16 +12,12 @@ interface AirplaneCardProps {
 
 const AirplaneCard: React.FC<AirplaneCardProps> = ({ airplane }) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
-      <div className="aspect-[4/3] overflow-hidden">
-        <img
-          src={airplane.imageUrl}
-          alt={airplane.name}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-        />
+    <div className="bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-700">
+      <div className="aspect-[4/3] flex items-center justify-center bg-gray-700">
+        <Icon name="Plane" size={64} className="text-blue-400" />
       </div>
       <div className="p-4">
-        <h3 className="text-lg font-medium text-gray-900 text-center">
+        <h3 className="text-lg font-medium text-white text-center">
           {airplane.name}
         </h3>
       </div>
